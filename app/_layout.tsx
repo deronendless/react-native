@@ -21,6 +21,13 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="auth/login" options={{ headerShown: false }} />
+        <Stack.Screen name="auth/register" options={{ headerShown: false }} />
+        <Stack.Screen name="product/[id]" options={{ title: '商品详情' }} />
+        <Stack.Screen name="order/[id]" options={{ title: '订单详情' }} />
+        <Stack.Screen name="profile/edit" options={{ title: '编辑个人信息' }} />
+        <Stack.Screen name="profile/address" options={{ title: '地址管理' }} />
+        <Stack.Screen name="profile/orders" options={{ title: '我的订单' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
